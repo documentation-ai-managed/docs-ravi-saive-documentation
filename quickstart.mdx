@@ -1,0 +1,132 @@
+---
+title: Quickstart: Getting Started
+description: A step-by-step guide to set up your first documentation space and create initial content quickly.
+---
+
+## Overview
+
+Get started with Ravi Saive Documentation in minutes. This guide walks you through account creation, space initialization, and adding your first page. No prior experience required—you handle everything from your terminal or web dashboard.
+
+<Callout kind="tip">
+  Use the web dashboard for visual setup or CLI for automation. Choose based on your workflow.
+</Callout>
+
+## Prerequisites
+
+Ensure you have Node.js `{>=18}` installed and a GitHub account for version control integration.
+
+<Tabs>
+  <Tab title="Node.js" icon="code">
+    Download from [nodejs.org](https://nodejs.org). Verify with `node --version`.
+  </Tab>
+  <Tab title="GitHub" icon="github">
+    Sign up at [github.com](https://github.com). Create a new repository later.
+  </Tab>
+</Tabs>
+
+## Step-by-Step Setup
+
+Follow these steps to launch your documentation space.
+
+<Steps>
+  <Step title="Create Account" icon="user-plus">
+    Visit [ravisaivedocs.com](https://ravisaivedocs.com) and sign up with your email or GitHub.
+
+    <Image
+      src="https://example.com/signup-screenshot.png"
+      alt="Account creation screen showing email and GitHub options"
+      width="800"
+      height="500"
+    />
+  </Step>
+
+  <Step title="Initialize Space" icon="settings">
+    Create a new documentation space from the dashboard or CLI.
+
+    <CodeGroup tabs="Dashboard,CLI">
+      ```bash
+      # No code needed—use the web UI
+      ```
+      ```bash
+      npx create-ravi-docs@latest my-docs-space
+      cd my-docs-space
+      npm install
+      ```
+    </CodeGroup>
+  </Step>
+
+  <Step title="Add First Page" icon="file-plus">
+    Generate your initial page using the built-in template.
+
+    <CodeGroup tabs="npm,yarn">
+      ```bash
+      npm run generate:quickstart
+      ```
+      ```bash
+      yarn generate:quickstart
+      ```
+    </CodeGroup>
+
+    Preview locally:
+
+    ```bash
+    npm run dev
+    ```
+
+    Open [http://localhost:3000](http://localhost:3000) to view your site.
+  </Step>
+
+  <Step title="Deploy" icon="rocket">
+    Push to GitHub and deploy automatically.
+
+    ```bash highlight="2-4"
+    git init
+    git add .
+    git commit -m "Initial docs space"
+    git remote add origin https://github.com/yourusername/my-docs-space.git
+    git push -u origin main
+    ```
+
+    Your site deploys to [yourspace.ravisaivedocs.app](https://yourspace.ravisaivedocs.app).
+  </Step>
+</Steps>
+
+## Next Steps
+
+Explore key features to enhance your documentation.
+
+<Columns cols={3}>
+  <Card title="Customize Themes" icon="palette" href="/docs/themes">
+    Apply brand colors like `#3B82F6` and custom layouts.
+  </Card>
+  <Card title="Add Components" icon="puzzle" href="/docs/components">
+    Use rich MDX components for interactive docs.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="/docs/git">
+    Manage changes with GitHub integration.
+  </Card>
+</Columns>
+
+## Frequently Asked Questions
+
+<ExpandableGroup>
+  <Expandable title="What is a documentation space?">
+    A space organizes your MDX pages, components, and assets. Think of it as a project repository tailored for docs.
+  </Expandable>
+
+  <Expandable title="Can I import existing docs?">
+    Yes, migrate from Docusaurus, MkDocs, or GitBook via CLI:
+
+    ```bash
+    npx ravi-docs import /path/to/existing/docs
+    ```
+  </Expandable>
+
+  <Expandable title="How do I add custom domains?">
+    In dashboard settings, enter your domain. Update DNS with a CNAME to `ravisaivedocs.app`.
+  </Expandable>
+</ExpandableGroup>
+
+<Callout kind="success">
+  Congratulations! Your first documentation space is live. Share the URL and start collaborating.
+</Callout>

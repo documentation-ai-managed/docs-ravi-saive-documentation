@@ -1,0 +1,102 @@
+---
+title: Welcome to Ravi Saive Documentation
+description: An overview of the Ravi Saive Documentation platform, a default space for organizing and managing project documentation with easy customization options.
+---
+
+## Platform Overview
+
+Ravi Saive Documentation provides a centralized space to organize, manage, and share your project documentation. You create structured pages using MDX, which combines Markdown with JSX components for interactive and visually rich content. Customize themes, navigation, and layouts to match your brand, including the default brand color `#3B82F6`.
+
+This platform supports version control integration, search functionality, and collaborative editing. Start by adding pages to your sidebar navigation and use components like Cards, Steps, and Tabs to enhance readability.
+
+<Callout kind="info">
+  Access your documentation at `{your-domain}.docsite.com` after setup.
+</Callout>
+
+## Key Features and Benefits
+
+Discover the core capabilities that make Ravi Saive Documentation efficient for teams and solo developers.
+
+<Columns cols={3}>
+  <Card title="Interactive Components" icon="components" href="/docs/components">
+    Build engaging docs with `<Steps>`, `<Tabs>`, `<CodeGroup>`, and more. Enhance user experience without custom code.
+  </Card>
+  <Card title="Custom Navigation" icon="menu" href="/docs/navigation">
+    Organize pages hierarchically. Add icons and groups for intuitive browsing.
+  </Card>
+  <Card title="Theme Customization" icon="palette" href="/docs/themes">
+    Apply your brand colors and fonts. Preview changes live in the editor.
+  </Card>
+</Columns>
+
+These features reduce documentation maintenance time by up to `50%` while improving user satisfaction.
+
+## Initial Setup Guidance
+
+Follow these steps to launch your documentation site quickly.
+
+<Steps>
+  <Step title="Create Your Space" icon="home">
+    Log in and select "New Documentation Space". Enter "Ravi Saive Documentation" as the name.
+  </Step>
+  <Step title="Configure Settings" icon="settings">
+    Set your brand color to `#3B82F6`. Enable search and analytics.
+  </Step>
+  <Step title="Add First Page" icon="plus">
+    Create `introduction.mdx` with YAML frontmatter.
+  </Step>
+  <Step title="Publish" icon="globe">
+    Deploy to a custom domain or use the default subdomain.
+  </Step>
+</Steps>
+
+Customize further with platform-specific instructions.
+
+<Tabs>
+  <Tab title="Markdown" icon="markdown">
+    Write standard Markdown for simple pages.
+
+    <CodeGroup tabs="bash,File Structure">
+      ```bash
+      mkdir docs
+      cd docs
+      echo "# Welcome" > introduction.md.mdx
+      ```
+      ```text
+      docs/
+      ├── introduction.mdx
+      ├── api/
+      │   └── endpoints.mdx
+      └── sidebar.json
+      ```
+    </CodeGroup>
+  </Tab>
+  <Tab title="MDX Components" icon="code">
+    Enhance with JSX components for interactivity.
+
+    ```jsx
+    <Card title="Feature" icon="star" href="/feature">
+      Interactive cards boost engagement.
+    </Card>
+    ```
+  </Tab>
+</Tabs>
+
+<Expandable title="Advanced Customization" default-open="false">
+  Edit `config.json` to add custom CSS:
+
+  ```json
+  {
+    "theme": {
+      "primaryColor": "#3B82F6",
+      "fontFamily": "Inter, sans-serif"
+    }
+  }
+  ```
+
+  Integrate with GitHub for version control by connecting your repository.
+</Expandable>
+
+<Callout kind="tip">
+  Test changes in preview mode before publishing to avoid disruptions.
+</Callout>
